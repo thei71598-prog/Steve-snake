@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>STEVE SNAKE</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- INTRODUCTION DU STUDIO -->
+  <div id="intro">
+    <div class="intro-logo">STEVE STUDIO</div>
+    <div class="intro-line"></div>
+    <div class="intro-text">PRÉSENTE</div>
+  </div>
+
+  <!-- TITRE -->
+  <header>
+    <h1>STEVE SNAKE</h1>
+    <div class="subtitle">ULTIMATE ARCADE EDITION</div>
+  </header>
+
+  <!-- STATISTIQUES -->
+  <section class="stats">
+    <div class="stat">
+      <span>SCORE</span>
+      <strong id="score">0</strong>
+    </div>
+
+    <div class="stat">
+      <span>NIVEAU</span>
+      <strong id="level">1/20</strong>
+    </div>
+
+    <div class="stat">
+      <span>RECORD</span>
+      <strong id="best">0</strong>
+    </div>
+  </section>
+
+  <!-- TERRAIN DE JEU -->
+  <canvas id="game" width="360" height="440"></canvas>
+
+  <!-- PAUSE -->
+  <button id="pauseBtn">⏸ PAUSE</button>
+
+  <div id="message">Mange les pommes pour progresser !</div>
+
+  <footer>STEVE STUDIO © 2026</footer>
+
+  <!-- MENU ET GAME OVER -->
+  <div id="overlay">
+    <div class="panel">
+      <h2 id="title">🐍 STEVE SNAKE</h2>
+
+      <p id="description">
+        Bienvenue dans le jeu !
+        Mange les pommes, évite les obstacles
+        et débloque les 20 niveaux.
+      </p>
+
+      <button id="startBtn">JOUER ▶</button>
+    </div>
+  </div>
+
+</body>
+</html>

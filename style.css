@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: #10131c;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 7px 10px;
+  user-select: none;
+}
+
+h1 {
+  color: #ff9d28;
+  font-size: 27px;
+  letter-spacing: 3px;
+  margin: 4px 0;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+.stat {
+  background: #202735;
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 80px;
+}
+
+.stat span {
+  color: #aaa;
+  font-size: 11px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 21px;
+  margin-top: 4px;
+}
+
+#game {
+  display: block;
+  width: min(92vw, 360px);
+  height: auto;
+  max-height: 49svh;
+  margin: 8px auto;
+  background: #17221e;
+  border: 3px solid #384c40;
+  border-radius: 12px;
+  touch-action: none;
+}
+
+button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 17px;
+  font-weight: bold;
+  background: #ff9628;
+  color: #171717;
+  touch-action: manipulation;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+#pauseBtn {
+  display: block;
+  margin: 8px auto;
+}
+
+#message {
+  color: #aaa;
+  font-size: 13px;
+  margin: 8px;
+}
+
+footer {
+  color: #777;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+/* MENU */
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: #080d12ee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.panel {
+  background: #202735;
+  padding: 28px 20px;
+  border-radius: 20px;
+  max-width: 350px;
+  width: 100%;
+  border: 1px solid #394353;
+  box-shadow: 0 0 35px #0008;
+}
+
+.panel h2 {
+  color: #ff9d28;
+  font-size: 27px;
+}
+
+.panel p {
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* INTRO STEVE STUDIO */
+#intro {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: radial-gradient(circle, #22202a, #050609 75%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: introFade 3.5s forwards;
+}
+
+.intro-logo {
+  font-size: 35px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #ff9d28;
+  text-shadow: 0 0 15px #ff7b00, 0 0 35px #ff4d00;
+  animation: logoReveal 1.5s ease-out both;
+}
+
+.intro-line {
+  width: 0;
+  height: 3px;
+  background: #ff9628;
+  box-shadow: 0 0 15px #ff9628;
+  animation: lineReveal 1s .8s forwards;
+}
+
+.intro-text {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 7px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: textReveal 1s 1.5s forwards;
+}
+
+@keyframes logoReveal {
+  from {
+    opacity: 0;
+    transform: scale(.5);
+    filter: blur(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes lineReveal {
+  to {
+    width: 220px;
+  }
+}
+
+@keyframes textReveal {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes introFade {
+  0%, 75% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
